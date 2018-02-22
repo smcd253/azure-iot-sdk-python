@@ -706,7 +706,9 @@ class IoTHubRegistryManager:
         pass
 
     def get_device_list(self, number_of_devices):
-        """Gets the list of devices registered on IoTHub.
+        """
+        DEPRECATED: get_device_list is deprecated and may be removed from a future release. 
+        Gets the list of devices registered on IoTHub.
         It will return with the requested number of devices.
         If the requested number more than the number of registered devices,
         than it will return the actual number of devices.

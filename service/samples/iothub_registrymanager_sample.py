@@ -66,19 +66,6 @@ def iothub_registrymanager_sample_run():
         iothub_registry_manager.delete_device(DEVICE_ID)
         print ( "" )
 
-        # GetDeviceList
-        print ( "GetDeviceList" )
-        number_of_devices = 3
-        dev_list = iothub_registry_manager.get_device_list(number_of_devices)
-
-        number_of_devices = len(dev_list)
-        print ( "Number of devices                        : {0}".format(number_of_devices) )
-
-        for device in range(0, number_of_devices):
-            title = "Device " + str(device)
-            print_device_info(title, dev_list[device])
-        print ( "" )
-
         # GetStatistics
         iothub_registry_statistics = iothub_registry_manager.get_statistics()
         print ( "GetStatistics" )
