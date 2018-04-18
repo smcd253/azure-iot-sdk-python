@@ -486,10 +486,10 @@ class ProvisioningServiceClient(object):
     def create_registration_state_query(self, reg_id, page_size=None):
         """
         Create a Query object to access results of a Provisioning Service query
-        for Device Registration States
+        for Device Registration States belonging to an Enrollment Group
 
-        :param query_spec: The specification for the query
-        :type query_spec: :class:`QuerySpecification<provisioningserviceclient.QuerySpecification>`
+        :param str reg_id: The registration id of the enrollment group to query device registration
+         states from.
         :param int page_size: The max results per page (optional)
         :returns: Query object that can iterate over results of the query
         :rtype: :class:`Query<provisioningserviceclient.Query>`
